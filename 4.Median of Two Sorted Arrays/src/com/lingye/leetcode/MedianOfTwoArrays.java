@@ -15,30 +15,67 @@ public class MedianOfTwoArrays {
      */
     public double findMedianSortedArrays(int[] nums1,int[] nums2){
 
+
         // 计算两个数组的长度
         int m=nums1.length;
         int n=nums2.length;
 
-        //两个数组的组合后的总长度
-        int totalLength=m+n;
+        int total=m+n;
 
-        // 定义新的数据用来记录两个数组排序好后的结果
-        int[] totalArray=new int[totalLength];
+        if(total%2==0){
+            return (findKthInTwoSoredArray(nums1,0,m,nums2,0,n,total/2)+findKthInTwoSoredArray(nums1,0,m,nums2,0,n,total/2 +1))/2;
+        }else{
+            return findKthInTwoSoredArray(nums1,0,m,nums2,0,n,total/2);
+        }
+    }
 
-        //如果总长度为偶数则为中间两个数除以2
-        if(totalLength%2==0){
-            //一次遍历就要放置正确所以要用两个变量记录输入数组移动情况
-            for(int i=0;i<totalLength;i++){
-                if(i<m && i<n ){
-                    if(nums1[i]<nums2[i]){
-                        totalArray[i]=nums1[1];
-                    }
-                }
-            }
+    /**
+     * 分治法，为了避免将两个数组完整的遍历一遍
+     * 寻找两个数组各自一部分，如A数组的前p个元素和B数组前q个元素
+     * 使得p+q=k
+     * 为什么需要递归，因为需要去平衡p和q如A'length=4，B'length=5，寻找这两个数组中第5小的元素。
+     * p+q=5的组合有很多种，如第5小的元素有可能为A数组的第一个，也有可能为第二、三、四个。
+     *
+     * @param arrayA 数组A
+     * @param startA 数组A的起始点，起始为0
+     * @param lengthA 数组A的子数组长度
+     * @param arrayB 数组B
+     * @param startB  数组B的起始点，起始为0
+     * @param lengthB 数组B的子数组长度
+     * @return
+     */
+    public int findKthInTwoSoredArray(int[] arrayA, int startA, int lengthA, int[] arrayB, int startB, int lengthB,int k) {
+
+        // 始终保证A数组的长度小于等于B数组
+        if(lengthA>lengthB){
+            return findKthInTwoSoredArray(arrayB,startB,lengthB,arrayA,startA,lengthA,k);
+        }
+        // 当一个数组全部被抛弃时直接返回另外
+        if(lengthA==0){
+            return arrayB[startB+k-1];
+        }
+        // 查找第一个元素时直接比较两数组第一个值然后返回
+        if(k==1){
+            return Math.min(arrayA[startA],arrayB[startB]);
+        }
+        // 先将k二分-->确定p、q
+        int pa=Math.min(k/2,lengthA);
+        int pb=k-pa;
+
+        // 二分之后需要多次递归去纠正和平衡p、q
+        // 如果A数组第pa个元素小于B数组前pb个元素，因为数组是有序的，我们不能保证B数组第pb个元素比k大还是比k小
+        // 但是可以肯定A数组前pa个元素全部比k小，即k肯定不在前pa个小组中，我们就可以将其去除
+        if(arrayA[startA+pa-1]<arrayB[startB+pb-1]){
+            // 这种情况说明一开始pa选择太偏左了，正确的数可能在k/2的右边，即pa>k/2,即把A数组k/2左边的全部抛弃
+            return findKthInTwoSoredArray(arrayA,startA+pa,lengthA-pa,arrayB,startB,lengthB,k-pa);
+
+        }else if(arrayA[startA+pa-1]>arrayB[startB+pb-1]){
+            // 这种情况说明pb选的太偏左了，或者说pa选的太偏右了，即pa<k/2
+            return findKthInTwoSoredArray(arrayA,startA,lengthA,arrayB,startB+pb,lengthB-pb,k-pb);
+        }else{
+            return arrayA[startA+pa-1];
         }
 
-
-        return 0.00;
     }
 
     /**
@@ -140,7 +177,13 @@ public class MedianOfTwoArrays {
         //int[] b = {3, 4, 6, 6, 8, 9, 10, 11, 12};
         int[] a = {1, 2, 3, 7};
         int[] b = {3, 4, 5, 6, 8};
-        int[] c = medianOfTwoArrays.mergeSortedArray(a, b);
-        int d = medianOfTwoArrays.findMedianByNormal(a, b);
+        int[] aa = {1,3};
+        int[] bb = {2};
+        double y=medianOfTwoArrays.findMedianByNormal(aa,bb);
+        //int x=medianOfTwoArrays.findKthInTwoSoredArray(a,0,a.length,b,0,b.length,5);
+
+
+//        int[] c = medianOfTwoArrays.mergeSortedArray(a, b);
+//        int d = medianOfTwoArrays.findMedianByNormal(a, b);
     }
 }
