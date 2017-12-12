@@ -2,6 +2,12 @@ package com.lingye.leetcode;
 
 import java.math.BigDecimal;
 
+/**
+ * @Author: LeeChao
+ * @Date: 2017/12/12
+ * @Describe:
+ * @Modified By:
+ */
 public class StringToInteger {
 
     /**

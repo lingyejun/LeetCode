@@ -1,5 +1,11 @@
 package com.lingye.leetcode;
 
+/**
+ * @Author: LeeChao
+ * @Date: 2017/12/12
+ * @Describe:
+ * @Modified By:
+ */
 public class PalindromeNumber {
 
     /**
