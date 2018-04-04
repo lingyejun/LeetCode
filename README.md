@@ -3,6 +3,10 @@ LeetCode
 
 ### LeetCode Algorithm
 
+LeetCode solutions in Java.
+
+Please feel free to fork and star to support this repo, thank you!
+
 ## Links
 
 * [Web Site](http://www.cnblogs.com/lingyejun/)
