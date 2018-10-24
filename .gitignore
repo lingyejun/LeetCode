@@ -2,3 +2,4 @@
 *.iml
 *.class
 */production
+.DS_Store
