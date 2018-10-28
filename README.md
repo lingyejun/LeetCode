@@ -32,9 +32,10 @@ Please feel free to fork and star to support this repo, thank you!
 | 16   | [3Sum Closest][016]                      | Array, Two Pointers              |
 | 17   | [Letter Combinations of a Phone Number][017] | String, Backtracking             |
 | 18   | [4Sum][018]                              | Array, Hash Table, Two Pointers  |
-| 20   | [Valid Parentheses][020]                              | Array, Hash Table, Two Pointers  |
-| 21   | [Merge Two Sorted Lists][021]                              | Array, Hash Table, Two Pointers  |
-| 22   | [Generate Parentheses][022]                              | Array, Hash Table, Two Pointers  |
+| 19   | [Remove Nth Node From End of List][019]                              | Array |
+| 20   | [Valid Parentheses][020]                              | Array  |
+| 21   | [Merge Two Sorted Lists][021]                              | LinedList  |
+| 22   | [Generate Parentheses][022]                              | Recursion  |
 
 [src]: https://github.com/lingyejun/LeetCode/tree/master/src
 
