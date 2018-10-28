@@ -32,7 +32,9 @@ Please feel free to fork and star to support this repo, thank you!
 | 16   | [3Sum Closest][016]                      | Array, Two Pointers              |
 | 17   | [Letter Combinations of a Phone Number][017] | String, Backtracking             |
 | 18   | [4Sum][018]                              | Array, Hash Table, Two Pointers  |
-
+| 20   | [Valid Parentheses][020]                              | Array, Hash Table, Two Pointers  |
+| 21   | [Merge Two Sorted Lists][021]                              | Array, Hash Table, Two Pointers  |
+| 22   | [Generate Parentheses][022]                              | Array, Hash Table, Two Pointers  |
 
 [src]: https://github.com/lingyejun/LeetCode/tree/master/src
 
@@ -53,3 +55,6 @@ Please feel free to fork and star to support this repo, thank you!
 [016]: https://github.com/lingyejun/LeetCode/blob/master/16.3Sum%20Closest/src/QA_note
 [017]: https://github.com/lingyejun/LeetCode/blob/master/17.Letter%20Combinations%20of%20a%20Phone%20Number/src/QA_note
 [018]: https://github.com/lingyejun/LeetCode/blob/master/18.4Sum/src/QA_note
+[020]: https://github.com/lingyejun/LeetCode/blob/master/20.%20Valid%20Parentheses/src/QA_note
+[021]: https://github.com/lingyejun/LeetCode/blob/master/21.%20Merge%20Two%20Sorted%20Lists/src/com/lingye/leetcode/MergeTwoSortedLists.java
+[022]: https://github.com/lingyejun/LeetCode/blob/master/22.%20Generate%20Parentheses/src/com/lingye/leetcode/GenerateParentheses.java
