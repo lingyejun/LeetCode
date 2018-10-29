@@ -1,4 +1,4 @@
-package com.lingye.leetcode;
+package com.lingye.leetcode.mtsl;
 
 /**
  * Merge two sorted linked lists and return it as a new list.
