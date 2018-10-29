@@ -56,6 +56,7 @@ Please feel free to fork and star to support this repo, thank you!
 [016]: https://github.com/lingyejun/LeetCode/blob/master/16.3Sum%20Closest/src/QA_note
 [017]: https://github.com/lingyejun/LeetCode/blob/master/17.Letter%20Combinations%20of%20a%20Phone%20Number/src/QA_note
 [018]: https://github.com/lingyejun/LeetCode/blob/master/18.4Sum/src/QA_note
+[019]: https://github.com/lingyejun/LeetCode/blob/master/18.4Sum/src/QA_note
 [020]: https://github.com/lingyejun/LeetCode/blob/master/20.%20Valid%20Parentheses/src/QA_note
 [021]: https://github.com/lingyejun/LeetCode/blob/master/21.%20Merge%20Two%20Sorted%20Lists/src/com/lingye/leetcode/MergeTwoSortedLists.java
 [022]: https://github.com/lingyejun/LeetCode/blob/master/22.%20Generate%20Parentheses/src/com/lingye/leetcode/GenerateParentheses.java
