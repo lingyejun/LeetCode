@@ -21,7 +21,7 @@ public class RemoveElement {
      * @param val
      * @return
      */
-    public int removeElement(int[] nums, int val) {
+    public int oldRemoveElement(int[] nums, int val) {
         // 特殊情况直接返回
         if (nums == null || nums.length == 0 || (nums.length == 1 && nums[0] == val)) {
             return 0;
@@ -59,6 +59,24 @@ public class RemoveElement {
             }
         }
         return idx + 1;
+    }
+
+    /**
+     * 直接将不是被删除的元素移到前面去
+     * 
+     * @param nums
+     * @param val
+     * @return
+     */
+    public int removeElement(int[] nums, int val) {
+        // 特殊情况直接返回
+        int idx = 0;
+        for (int i=0;i<nums.length;i++){
+            if (nums[i]!=val){
+                nums[idx++]=nums[i];
+            }
+        }
+        return idx;
     }
 
     public static void main(String[] args) {
