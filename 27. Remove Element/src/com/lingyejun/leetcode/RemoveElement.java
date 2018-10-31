@@ -23,35 +23,39 @@ public class RemoveElement {
      */
     public int removeElement(int[] nums, int val) {
         // 特殊情况直接返回
-        if (nums == null || nums.length == 0) {
+        if (nums == null || nums.length == 0 || (nums.length == 1 && nums[0] == val)) {
             return 0;
         }
         // 将要删除的元素放置到尾部
         int idx = nums.length - 1;
+        // 进行一次数组双向遍历
         for (int i = 0; i < nums.length; i++) {
-            if (i >= idx) {
-                break;
-            }
+            // 遇到要删除的元素
             if (nums[i] == val) {
-                if (nums[idx] == val) {
-                    idx--;
-                    // 遍历直至找到不同的
-                    for (int j = idx; j > i; j--) {
-                        if (nums[j] != val) {
-                            int temp = nums[i];
-                            nums[i] = nums[idx];
-                            nums[idx] = temp;
-                            idx--;
-                            break;
-                        }
+                for (int j = idx; j > i || idx + 1 == nums.length - 1; j--) {
+                    // 数组尾部就是要删除的元素，则向前找
+                    if (nums[j] == nums[i]) {
+                        // 继续找下一个
                         idx--;
+                        // 全部为一样的值，全部删除
+                        if (i == 0 && idx == i) {
+                            return 0;
+                        }
+                        continue;
+                    } else {
+                        // 将删除的元素替换
+                        int temp = nums[i];
+                        nums[i] = nums[j];
+                        nums[j] = temp;
+                        idx--;
+                        break;
                     }
-                } else {
-                    int temp = nums[i];
-                    nums[i] = nums[idx];
-                    nums[idx] = temp;
-                    idx--;
                 }
+            } else if (nums.length == 2 && nums[idx] == val) {
+                idx--;
+            }
+            if (idx < i) {
+                break;
             }
         }
         return idx + 1;
@@ -60,11 +64,13 @@ public class RemoveElement {
     public static void main(String[] args) {
         int[] a = new int[]{0, 1, 2, 2, 3, 0, 4, 2};
         int[] ab = new int[]{3, 2, 2, 3};
-        int[] abc = new int[]{3, 3,3};
+        int[] abc = new int[]{3, 3, 3};
         int[] abcd = new int[]{1};
+        int[] abcde = new int[]{4, 5};
+        int[] abcdef = new int[]{2, 2, 3};
         int val = 3;
         RemoveElement removeElement = new RemoveElement();
-        int length = removeElement.removeElement(abc, val);
+        int length = removeElement.removeElement(abcdef, val);
         System.out.println(length);
     }
 }
