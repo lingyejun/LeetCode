@@ -1,5 +1,7 @@
 package com.lingye.leetcode.mtsl;
 
+import java.util.List;
+
 /**
  * Merge two sorted linked lists and return it as a new list.
  * The new list should be made by splicing together the nodes of the first two lists.
@@ -13,6 +15,7 @@ package com.lingye.leetcode.mtsl;
  * @Modified By:
  */
 public class MergeTwoSortedLists {
+
     public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
         // 初始化ListNode
         ListNode mergeList = new ListNode(-1);
@@ -37,40 +40,24 @@ public class MergeTwoSortedLists {
             mergeNext = mergeNext.next;
         }
         return mergeList.next;
-                /*if (l1 == null) {
-            head = l1;
-        } else if (l2 == null) {
-            head = l2;
-        } else {
-            ListNode temp = null;
-            while (l1 != null && l2 != null) {
-                if (l1.val < l2.val) {
-                    temp = l1;
-                    mergeList.next = temp;
-                    temp.next = null;
-                    mergeList = temp;
-                    l1 = l1.next;
-                }else if (l1.val > l2.val) {
-                    temp = l2;
-                    mergeList.next = temp;
-                    temp.next = null;
-                    mergeList = temp;
-                    l2 = l2.next;
-                } else {
-                    temp = l1;
-                    mergeList.next = temp;
-                    temp.next = null;
-                    mergeList = temp;
-                    l1 = l1.next;
+    }
 
-                    temp = l2;
-                    mergeList.next = temp;
-                    temp.next = null;
-                    mergeList = temp;
-                    l2 = l2.next;
-                }
-            }
-        }*/
+    public ListNode mergeTwoListsByRecur(ListNode l1, ListNode l2) {
+        if (l1 == null) {
+            return l2;
+        }
+        if (l2 == null) {
+            return l1;
+        }
+        ListNode listNode;
+        if (l1.val < l2.val) {
+            listNode = l1;
+            listNode.next = mergeTwoListsByRecur(l1.next, l2);
+        } else {
+            listNode = l2;
+            listNode.next = mergeTwoListsByRecur(l1, l2.next);
+        }
+        return listNode;
     }
 
     public static void printListNode(ListNode ln) {
@@ -93,7 +80,7 @@ public class MergeTwoSortedLists {
         printListNode(listNode);
         printListNode(listNode2);
         // 合并
-        ListNode mergeListNode = new MergeTwoSortedLists().mergeTwoLists(listNode, listNode2);
+        ListNode mergeListNode = new MergeTwoSortedLists().mergeTwoListsByRecur(listNode, listNode2);
         // 打印
         printListNode(mergeListNode);
     }
