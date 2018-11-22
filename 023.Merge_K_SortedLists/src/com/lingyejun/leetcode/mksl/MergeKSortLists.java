@@ -16,6 +16,12 @@ package com.lingyejun.leetcode.mksl;
  */
 public class MergeKSortLists {
 
+    /**
+     * 分治法进行合并 12-6-3-2-1
+     *
+     * @param lists
+     * @return
+     */
     public ListNode mergeKLists(ListNode[] lists) {
         if (lists == null || lists.length == 0) {
             return null;
