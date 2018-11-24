@@ -23,16 +23,51 @@ public class SwapNodesInPairs {
      * @return
      */
     public ListNode swapPairs(ListNode head) {
-        ListNode swappedHead = head;
+        // 0
+        ListNode swappedHead = new ListNode(0);
+        // 0-->1-->2-->3-->4
         swappedHead.next = head;
-        while (head.next!=null){
-
+        // pre : 0-->1-->2-->3-->4
+        ListNode pre = swappedHead;
+        // cur : 1-->2-->3-->4
+        ListNode cur = head;
+        while (cur != null && cur.next != null) {
+            pre.next = cur.next;// 0-->2
+            cur.next = cur.next.next;// 1-->3
+            pre.next.next = cur; // 2-->1
+            // 0-->2-->1-->3
+            pre = cur;
+            cur = cur.next;
         }
-        return swappedHead;
+        return swappedHead.next;
+    }
+
+    public static void printListNode(ListNode ln) {
+        System.out.print(ln.val);
+        while (ln.next != null) {
+            ln = ln.next;
+            System.out.print("->" + ln.val);
+        }
+        System.out.println();
     }
 
     public static void main(String[] args) {
-
+        // 创建多个链表
+        ListNode listNode = new ListNode(1);
+        ListNode listNode1 = new ListNode(2);
+        listNode.next = listNode1;
+        ListNode listNode2 = new ListNode(3);
+        listNode1.next=listNode2;
+        ListNode listNode3 = new ListNode(4);
+        listNode2.next = listNode3;
+        ListNode listNode4 = new ListNode(5);
+        listNode3.next = listNode4;
+        ListNode listNode5 = new ListNode(6);
+        listNode4.next=listNode5;
+        SwapNodesInPairs snip = new SwapNodesInPairs();
+        snip.printListNode(listNode);
+        ListNode newList = snip.swapPairs(listNode);
+        snip.printListNode(newList);
     }
 }
 
