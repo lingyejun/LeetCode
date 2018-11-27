@@ -14,6 +14,13 @@ package com.lingyejun.leetcode.rnikg;
  */
 public class ReverseNodesInKGroup {
 
+    /**
+     * ReverseNodesInKGroup
+     * 
+     * @param head
+     * @param k
+     * @return
+     */
     public ListNode reverseKGroup(ListNode head, int k) {
         if (length(head) < k) {
             return head;
