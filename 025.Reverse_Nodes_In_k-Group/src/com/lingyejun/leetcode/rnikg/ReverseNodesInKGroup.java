@@ -16,7 +16,7 @@ public class ReverseNodesInKGroup {
 
     /**
      * ReverseNodesInKGroup
-     * 
+     *
      * @param head
      * @param k
      * @return
@@ -39,6 +39,12 @@ public class ReverseNodesInKGroup {
         return prev;
     }
 
+    /**
+     * get list length
+     *
+     * @param listNode
+     * @return
+     */
     public static int length(ListNode listNode) {
         int length = 0;
         while (listNode != null) {
@@ -49,6 +55,11 @@ public class ReverseNodesInKGroup {
         return length;
     }
 
+    /**
+     * print list
+     * 
+     * @param ln
+     */
     public static void printListNode(ListNode ln) {
         System.out.print(ln.val);
         while (ln.next != null) {
