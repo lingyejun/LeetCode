@@ -57,7 +57,7 @@ public class ReverseNodesInKGroup {
 
     /**
      * print list
-     * 
+     *
      * @param ln
      */
     public static void printListNode(ListNode ln) {
@@ -87,6 +87,9 @@ public class ReverseNodesInKGroup {
         printListNode(reverseNode);
     }
 
+    /**
+     * 定义静态内部类
+     */
     static class ListNode {
 
         int val;
