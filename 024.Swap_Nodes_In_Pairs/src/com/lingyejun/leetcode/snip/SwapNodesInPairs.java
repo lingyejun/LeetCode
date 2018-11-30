@@ -42,6 +42,11 @@ public class SwapNodesInPairs {
         return swappedHead.next;
     }
 
+    /**
+     * printListNode
+     * 
+     * @param ln
+     */
     public static void printListNode(ListNode ln) {
         System.out.print(ln.val);
         while (ln.next != null) {
