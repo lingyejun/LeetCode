@@ -44,7 +44,7 @@ public class SwapNodesInPairs {
 
     /**
      * printListNode
-     * 
+     *
      * @param ln
      */
     public static void printListNode(ListNode ln) {
