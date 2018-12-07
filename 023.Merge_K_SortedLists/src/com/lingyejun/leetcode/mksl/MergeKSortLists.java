@@ -37,6 +37,13 @@ public class MergeKSortLists {
         return lists[0];
     }
 
+    /**
+     * mergeTwoLists
+     * 
+     * @param l1
+     * @param l2
+     * @return
+     */
     public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
         if (l1 == null) {
             return l2;
