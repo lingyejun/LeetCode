@@ -39,7 +39,7 @@ public class MergeKSortLists {
 
     /**
      * mergeTwoLists
-     * 
+     *
      * @param l1
      * @param l2
      * @return
