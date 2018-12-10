@@ -28,7 +28,17 @@ import java.util.List;
  */
 public class Solution {
 
+    /**
+     * Substring with Concatenation of All Words
+     * @param s
+     * @param words
+     * @return
+     */
     public List<Integer> findSubstring(String s, String[] words) {
         return null;
+    }
+
+    public static void main(String[] args) {
+
     }
 }
