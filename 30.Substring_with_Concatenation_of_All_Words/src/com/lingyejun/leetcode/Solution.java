@@ -24,7 +24,7 @@ import java.util.List;
  * words = ["word","student"]
  * Output: []
  *
- * @Modified By:
+ * @Modified By: lingyejun
  */
 public class Solution {
 
