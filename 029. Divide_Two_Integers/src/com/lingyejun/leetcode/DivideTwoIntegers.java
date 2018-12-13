@@ -14,7 +14,7 @@ package com.lingyejun.leetcode;
  * @Author: LeeChao
  * @Date: 2018/11/2
  * @Describe:
- * @Modified By:
+ * @Modified By: lingyejun
  */
 public class DivideTwoIntegers {
 
