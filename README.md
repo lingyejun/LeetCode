@@ -37,6 +37,14 @@ Please feel free to fork and star to support this repo, thank you!
 | 20   | [Valid Parentheses][020]                              | Array  |
 | 21   | [Merge Two Sorted Lists][021]                              | LinedList  |
 | 22   | [Generate Parentheses][022]                              | Recursion  |
+| 23   | [Merge k Sorted Lists ][023]                              | Linked List, Heap  |
+| 24   | [Swap Nodes in Pairs][024]                              | Linked List  |
+| 25   | [Reverse Nodes in k-Group][025]                              | Linked List |
+| 26   | [Remove Duplicates from Sorted Array][026]                              | Array |
+| 27   | [Remove Element][027]                              | Array |
+| 28   | [Implement strStr][028]                              | String, Two Pointers  |
+| 29   | [Divide Two Integers][029]                              | Binary Search |
+| 30   | [Substring with Concatenation of All Words][030]                              | HashTable, Two Pointers  |
 
 [src]: https://github.com/lingyejun/LeetCode/tree/master/src
 
@@ -60,5 +68,13 @@ Please feel free to fork and star to support this repo, thank you!
 [018]: https://github.com/lingyejun/LeetCode/blob/master/018.4Sum/src/com/lingye/leetcode/SumOf4Num.java
 [019]: https://github.com/lingyejun/LeetCode/blob/master/019.RemoveNthNodeFromEndofList/src/com/lingye/leetcode/renn/RemoveEndNthNode.java
 [020]: https://github.com/lingyejun/LeetCode/blob/master/020.%20Valid_Parentheses/src/com/lingye/leetcode/ValidParentheses.java
-[021]: https://github.com/lingyejun/LeetCode/blob/master/21.%20Merge%20Two%20Sorted%20Lists/src/com/lingye/leetcode/MergeTwoSortedLists.java
-[022]: https://github.com/lingyejun/LeetCode/blob/master/22.%20Generate%20Parentheses/src/com/lingye/leetcode/GenerateParentheses.java
+[021]: https://github.com/lingyejun/LeetCode/blob/master/021.%20Merge_Two_Sorted_Lists/src/com/lingye/leetcode/mtsl/MergeTwoSortedLists.java
+[022]: https://github.com/lingyejun/LeetCode/blob/master/022.%20Generate_Parentheses/src/com/lingye/leetcode/GenerateParentheses.java
+[023]: https://github.com/lingyejun/LeetCode/blob/master/023.Merge_K_SortedLists/src/com/lingyejun/leetcode/mksl/MergeKSortLists.java
+[024]: https://github.com/lingyejun/LeetCode/blob/master/024.Swap_Nodes_In_Pairs/src/com/lingyejun/leetcode/snip/SwapNodesInPairs.java
+[025]: https://github.com/lingyejun/LeetCode/blob/master/025.Reverse_Nodes_In_k-Group/src/com/lingyejun/leetcode/rnikg/ReverseNodesInKGroup.java
+[026]: https://github.com/lingyejun/LeetCode/blob/master/026.%20Remove_Duplicates_from_Sorted_Array/src/com/lingyejun/leetcode/RemoveDuplicatesFromSortedArray.java
+[027]: https://github.com/lingyejun/LeetCode/blob/master/027.%20Remove_Element/src/com/lingyejun/leetcode/RemoveElement.java
+[028]: https://github.com/lingyejun/LeetCode/blob/master/028.%20Implement_strStr/src/com/lingyejun/leetcode/ImplementStrStr.java
+[029]: https://github.com/lingyejun/LeetCode/blob/master/029.%20Divide_Two_Integers/src/com/lingyejun/leetcode/DivideTwoIntegers.java
+[030]: https://github.com/lingyejun/LeetCode/blob/master/30.Substring_with_Concatenation_of_All_Words/src/com/lingyejun/leetcode/Solution.java
