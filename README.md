@@ -15,6 +15,7 @@ Please feel free to fork and star to support this repo, thank you!
 
 | #    | Title                                    | Tag                                      |
 | :--- | :--------------------------------------- | :--------------------------------------- |
+| 1    | [TwoSum][001]                   | Integer                |
 | 2    | [Add Two Numbers][002]                   | Linked List, Math                |
 | 3    | [Longest Substring Without Repeating Characters][003] | Hash Table, Two Pointers, String |
 | 4    | [Median of Two Sorted Arrays][004]       | Array, Binary Search, Divide and Conquer |
@@ -39,6 +40,7 @@ Please feel free to fork and star to support this repo, thank you!
 
 [src]: https://github.com/lingyejun/LeetCode/tree/master/src
 
+[001]: https://github.com/lingyejun/LeetCode/blob/master/001.Two_Sum/src/com/lingyejun/com/TwoSum.java
 [002]: https://github.com/lingyejun/LeetCode/blob/master/2.Add%20Two%20Numbers/QA_note
 [003]: https://github.com/lingyejun/LeetCode/blob/master/3.Longest%20Substring%20Without%20Repeating%20Characters/src/QA_note
 [004]: https://github.com/lingyejun/LeetCode/blob/master/4.Median%20of%20Two%20Sorted%20Arrays/src/com/lingye/leetcode/QA_note
