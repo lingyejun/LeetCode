@@ -17,7 +17,7 @@ Please feel free to fork and star to support this repo, thank you!
 | :--- | :--------------------------------------- | :--------------------------------------- |
 | 1    | [TwoSum][001]                   | Integer                |
 | 2    | [Add Two Numbers][002]                   | Linked List, Math                |
-| 3    | [Longest Substring Without Repeating Characters][003] | Hash Table, Two Pointers, String |
+| 3    | [Longest Substring Without Repeating Characters][003] | Hash Table, String |
 | 4    | [Median of Two Sorted Arrays][004]       | Array, Binary Search, Divide and Conquer |
 | 5    | [Longest Palindromic Substring][005]     | String                           |
 | 6    | [ZigZag Conversion][006]                 | String                           |
