@@ -1,8 +1,5 @@
 package com.lingye.leetcode;
 
-
-import java.util.List;
-
 public class AddTwoNumbers {
 
     public ListNode addTwoNumbersByString(ListNode l1, ListNode l2) {

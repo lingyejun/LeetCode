@@ -17,7 +17,7 @@ package com.lingyejun.leetcode;
  * @Author: LeeChao
  * @Date: 2018/11/1
  * @Describe:
- * @Modified By: lingyejun  
+ * @Modified By: lingyejun
  */
 public class ImplementStrStr {
 
